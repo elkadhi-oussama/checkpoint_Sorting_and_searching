@@ -1,0 +1,14 @@
+PROCEDURE playing_cards(VAR arr: ARRAY_OF INTEGER, n: INTEGER)
+VAR
+    i,j: INTEGER;
+BEGIN
+    FOR i FROM 2 TO n STEP 1  DO
+        a := arr[i] ;
+        j := i;
+        WHILE (j> 1)  AND ( arr[j-1] > a) DO
+            arr[j] := arr[j-1];
+            j := j-1;
+        END_WHILE
+        arr[j] := a;
+    END_FOR
+END
